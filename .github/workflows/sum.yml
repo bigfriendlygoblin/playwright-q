@@ -20,8 +20,10 @@ jobs:
         run: |
           pip install playwright
           playwright install chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /root/.cache/ms-playwright
 
       - name: Run Playwright Scraper
         run: python sum_tables.py
         env:
-          PLAYWRIGHT_BROWSERS_PATH: 0
+          PLAYWRIGHT_BROWSERS_PATH: /root/.cache/ms-playwright

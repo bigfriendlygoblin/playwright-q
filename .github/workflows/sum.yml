@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-scraper:
-    name: Run Playwright QA (email: 24f2001830@ds.study.iitm.ac.in)
+    name: Run-Playwright-QA-email-24f2001830@ds.study.iitm.ac.in
     runs-on: ubuntu-latest
 
     steps:

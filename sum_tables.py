@@ -7,6 +7,7 @@ TOTAL = 0
 with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page()
+    page.set_default_navigation_timeout(120000)  # 60 sec timeout
     
     for seed in SEEDS:
         url = f"https://ds3.orth.xyz/table?seed={seed}"
